@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,11 +18,56 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.bx-shadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.scroll-x {
+  overflow-x: scroll;
+}
+
+.scroll-x::-webkit-scrollbar {
+  display: none;
+}
+
+.content-form label {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: .2px;
+  line-height: 1.52em;
+}
+
+.content-form input,
+.content-form textarea {
+  font-size: 14px;
+  letter-spacing: .2px;
+  outline: none;
+  padding: 10px;
+  background: none;
+  margin-top: .6rem;
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.content-form input:focus,
+.content-form textarea:focus {
+  border: 2px solid #00a6fb;
+}
+
+.content-form textarea {
+  min-height: 180px;
 }
