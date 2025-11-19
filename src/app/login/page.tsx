@@ -1,8 +1,7 @@
 import { LoginForm } from "../../components/login-form"
 import Navbar from "../../components/Navbar"
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Login",
   description: "Login to access your QRzee account and manage QR codes.",
 }
