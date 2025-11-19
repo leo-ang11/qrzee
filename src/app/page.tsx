@@ -1,10 +1,3 @@
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import FormGenerator from "../components/FormGenerator";
-import Footer from "../components/Footer";
-import FAQ from "../components/Faq";
-
-
 export const metadata = {
   title: "QRzee | Generate & Publish Dynamic QR Codes",
   description: "Create, customize, and share dynamic QR Codes easily. Update your links or content anytime without reprinting",
@@ -14,6 +7,12 @@ export const metadata = {
     follow: true,
   }
 }
+
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import FormGenerator from "../components/FormGenerator";
+import Footer from "../components/Footer";
+import FAQ from "../components/Faq";
 
 export default function Home() {
   return (

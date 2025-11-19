@@ -1,11 +1,3 @@
-'use client'
-
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
-import ListQR from "../components/ListQr";
-
 export const metadata = {
   title: "Dashboard",
   description: "Manage your QR codes and account settings in QRzee admin dashboard.",
@@ -14,6 +6,14 @@ export const metadata = {
       follow: false,
   }
 }
+
+'use client'
+
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import Sidebar from "../components/Sidebar";
+import Header from "../components/Header";
+import ListQR from "../components/ListQr";
 
 export default function Dashboard() {
 

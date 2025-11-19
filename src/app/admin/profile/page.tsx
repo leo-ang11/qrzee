@@ -1,12 +1,3 @@
-'use client'
-
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import Header from "../components/Header"
-import Sidebar from "../components/Sidebar"
-import FormProfile from "../components/FormProfile"
-import { useState } from "react"
-
 export const metadata = {
   title: "Profile",
     description: "Update your profile information and settings.",
@@ -15,6 +6,15 @@ export const metadata = {
         follow: false,
     }
 }
+
+'use client'
+
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import Header from "../components/Header"
+import Sidebar from "../components/Sidebar"
+import FormProfile from "../components/FormProfile"
+import { useState } from "react"
 
 export default function Profile() {
 
