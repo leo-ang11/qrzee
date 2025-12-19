@@ -10,6 +10,7 @@ export default function Navbar() {
 
     const [menu, setMenu] = useState(false)
     const [isLogin, setIsLogin] = useState(false)
+    const [email, setEmail] = useState("");
     const endpoint = process.env.NEXT_PUBLIC_API_URL
 
     const menuRef = useRef<HTMLDivElement | null>(null);
@@ -23,9 +24,11 @@ export default function Navbar() {
                 credentials: 'include'
             })
 
+            const data = await response.json();
             if (response.status === 200) {
                 setIsLogin(true)
             }
+            setEmail(data.user.email);
 
         } catch (error) {
             console.error(error)
@@ -73,7 +76,7 @@ export default function Navbar() {
                 </Link>
                 {isLogin ?
                     <div className="hidden sm:flex gap-3 items-center text-gray-500">
-                        <p className="text-[12px] tracking-[.2px] ">leoanggoro@gmail.com</p>
+                        <p className="text-[12px] tracking-[.2px] ">{email}</p>
                         <Link href={"/admin/dashboard"} className="flex cursor-pointer items-center justify-center p-2 border border-gray-200 rounded-full">
                             <FiUser
                             size={16}
@@ -94,7 +97,7 @@ export default function Navbar() {
                 <div className="relative block sm:hidden">
                     {isLogin ? 
                         <div className="flex gap-3 items-center text-gray-500">
-                            <p className="text-[12px] tracking-[.2px] ">leoanggoro@gmail.com</p>
+                            <p className="text-[12px] tracking-[.2px] ">{email}</p>
                             <Link href={"/admin/dashboard"} className="flex cursor-pointer items-center justify-center p-2 border border-gray-200 rounded-full">
                                 <FiUser
                                 size={16}

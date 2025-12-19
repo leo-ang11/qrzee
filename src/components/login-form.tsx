@@ -109,12 +109,6 @@ export function LoginForm({
                   onChange={(e) => setPassword(e.target.value)}
                   required />
               </div>
-              <a
-                href="#"
-                className="ml-auto mt-[-15px] inline-block text-[13px] tracking-[.2px] text-primary"
-              >
-                Forgot password?
-              </a>
               <Button
               type="submit"
               className="w-full text-white mt-6 "
